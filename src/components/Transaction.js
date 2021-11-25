@@ -1,23 +1,11 @@
 import React from 'react'
 
-export const Transaction = () => {
+export const Transaction = ({transaction}) => {
+    const sign = transaction.amount < 0 ? '-': '+';
+
     return (
-        <>
-            <h3>Add new transaction</h3>
-            <form>
-                <div className="form-control">
-                <label htmlFor="text">Text</label>
-                <input type="text" placeholder="Enter text..." />
-                </div>
-                <div className="form-control">
-                <label htmlFor="amount"
-                    >Amount <br />
-                    (negative - expense, positive - income)</label
-                >
-                <input type="number" placeholder="Enter amount..." />
-                </div>
-                <button className="btn">Add transaction</button>
-            </form>
-        </>
-    )
+        <li className={transaction.amount <0 ? 'minus': 'plus'}> 
+            {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span><button className="delete-btn">x</button>   
+        </li>
+    ) 
 }
