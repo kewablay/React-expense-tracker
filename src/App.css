@@ -41,6 +41,16 @@ body {
   padding: 1.2rem;
   border-radius: 1.2rem;
   background: whitesmoke;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+
+/* background: rgba(255, 255, 255, 0.22);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.8px);
+-webkit-backdrop-filter: blur(9.8px);
+border: 1px solid rgba(255, 255, 255, 0.54); */
 }
 
 h1 {
@@ -60,18 +70,25 @@ h4 {
 }
 
 .expense-detail {
-  padding: .8rem;
-  border-radius: .8rem;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
   background-image: linear-gradient(
     to right top,
-    #ff97718c ,
+    #ff97718c,
     #ffc75f88,
     #f9f97188
   );
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .inc-exp-container {
-  /* background-color: #fff; */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -107,23 +124,30 @@ label {
   margin: 10px 0;
 }
 
+.text-muted{
+  color: rgb(165, 161, 161);
+  font-size: 15px;
+}
+
 input[type="text"],
 input[type="number"] {
   border: 1px solid #dedede;
-  border-radius: 2px;
+  border-radius: 5px;
   display: block;
   font-size: 16px;
   padding: 10px;
   width: 100%;
+  margin-bottom: .5rem;
 }
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-image: linear-gradient(144deg,#8aa7ec, #5B42F3 50%,#00DDEB);
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
-  display: block;
+  border-radius: 5px;
+  display: block; 
   font-size: 16px;
   margin: 10px 0 30px;
   padding: 10px;
@@ -142,14 +166,21 @@ input[type="number"] {
 }
 
 .list li {
-  background-color: #fff;
   box-shadow: var(--box-shadow);
   color: #333;
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 10px 0;
+
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.21);
+border-radius: 7px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(11.6px);
+-webkit-backdrop-filter: blur(11.6px);
+border: 1px solid rgba(255, 255, 255, 0.32);
 }
 
 .list li.plus {
@@ -162,16 +193,16 @@ input[type="number"] {
 
 .delete-btn {
   cursor: pointer;
-  background-color: #e74c3c;
+  background:transparent;
   border: 0;
-  color: #fff;
-  font-size: 20px;
+  color: red;
+  font-size: 30px;
   line-height: 20px;
-  padding: 2px 5px;
+  padding: 2px 2px;
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-100%, -50%);
+  transform: translate(20%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
