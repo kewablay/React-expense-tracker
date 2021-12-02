@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -9,19 +9,38 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
   margin: 30px auto;
-  width: 350px;
+  width: 410px;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  background: whitesmoke;
 }
 
 h1 {
@@ -40,8 +59,19 @@ h4 {
   text-transform: uppercase;
 }
 
+.expense-detail {
+  padding: .8rem;
+  border-radius: .8rem;
+  background-image: linear-gradient(
+    to right top,
+    #ff97718c ,
+    #ffc75f88,
+    #f9f97188
+  );
+}
+
 .inc-exp-container {
-  background-color: #fff;
+  /* background-color: #fff; */
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -77,8 +107,8 @@ label {
   margin: 10px 0;
 }
 
-input[type='text'],
-input[type='number'] {
+input[type="text"],
+input[type="number"] {
   border: 1px solid #dedede;
   border-radius: 2px;
   display: block;

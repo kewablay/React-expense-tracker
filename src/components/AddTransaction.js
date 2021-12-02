@@ -1,17 +1,30 @@
 import React, {useState, useContext} from 'react'
-import { TransactionContext } from '../context/TransactionContext'
+import { GlobalContext } from '../context/GlobalState';
+import { useId } from "react-id-generator"
+
 
 export const AddTransaction = () => {
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
-    const [transactions, setTransactions] = useContext(TransactionContext)
+    const { addTransaction } = useContext(GlobalContext);
+    const [htmlId] = useId();
 
-    
+    const onSubmit = e => {
+        e.preventDefault()
+       
+        const newTransaction = {
+            id: {htmlId},
+            text,
+            amount: +amount,
+        }
+
+        addTransaction(newTransaction)
+    }
 
     return (
         <>
             <h3>Add new transaction</h3>
-            <form>
+            <form onSubmit={onSubmit}>
                 <div className="form-control">
                 <label htmlFor="text">Text</label>
                 <input type="text" placeholder="Enter text..."  value={text} onChange={(e) => setText(e.target.value)} />
