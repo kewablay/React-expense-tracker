@@ -124,11 +124,6 @@ label {
   margin: 10px 0;
 }
 
-.text-muted{
-  color: rgb(165, 161, 161);
-  font-size: 15px;
-}
-
 input[type="text"],
 input[type="number"] {
   border: 1px solid #dedede;
@@ -209,4 +204,17 @@ border: 1px solid rgba(255, 255, 255, 0.32);
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+.transaction-section{
+  height: 15rem;
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+.add-image-container{
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
