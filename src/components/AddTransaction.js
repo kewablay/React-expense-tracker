@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { useId } from "react-id-generator";
 import addImg from "../images/add.png";
+import {motion} from "framer-motion"
 
 export const AddTransaction = () => {
   const [text, setText] = useState("");
@@ -25,7 +26,7 @@ export const AddTransaction = () => {
   return (
     <>
       {addClicked && (
-        <div>
+        <motion.div className="addTransaction">
           <h3>Add new transaction</h3>
           <form onSubmit={onSubmit}>
             <div className="form-control">
@@ -46,7 +47,7 @@ export const AddTransaction = () => {
             </div>
             <button className="btn">Add transaction</button>
           </form>
-        </div>
+        </motion.div>
       )}
       <div className="add-image-container">
         <img
