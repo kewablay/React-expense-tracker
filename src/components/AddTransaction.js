@@ -47,6 +47,9 @@ export const AddTransaction = () => {
         <motion.div
           className="addTransaction"
           variants={addTransactionVariant}
+          drag
+          dragConstraints={{ left: 0, top: 0, right: 400, bottom: 0 }}
+          dragElastic={0.2}
           initial="hidden"
           animate="visible"
         >
