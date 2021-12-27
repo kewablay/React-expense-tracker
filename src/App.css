@@ -36,8 +36,9 @@ body {
 }
 
 .container {
+  position: relative;
   margin: 30px auto;
-  width: 410px;
+  width: 375px;
   padding: 1.2rem;
   border-radius: 1.2rem;
   background: whitesmoke;
@@ -205,9 +206,24 @@ border: 1px solid rgba(255, 255, 255, 0.32);
 .list li:hover .delete-btn {
   opacity: 1;
 }
-
+.addTransaction h3{
+  margin-top: .5rem;
+}
 .addTransaction{
-  /* position: absolute; */
+  position: absolute;
+    bottom: 10%;
+    width: 90%;
+    padding: .5rem;
+    margin-top: 0;
+background: grey;
+border-radius: 7px;
+
+background: rgba(255, 255, 255, 0.21);
+border-radius: 7px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(11.6px);
+-webkit-backdrop-filter: blur(11.6px);
+border: 1px solid rgba(255, 255, 255, 0.32);
 }
 
 .transaction-section{

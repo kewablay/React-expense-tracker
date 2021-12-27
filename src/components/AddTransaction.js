@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { useId } from "react-id-generator";
 import addImg from "../images/add.png";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
 export const AddTransaction = () => {
   const [text, setText] = useState("");
@@ -21,12 +21,35 @@ export const AddTransaction = () => {
     };
 
     addTransaction(newTransaction);
+    setAmount("");
+    setText("");
+  };
+
+  const addTransactionVariant = {
+    hidden: {
+      scale: 0,
+      height: 0,
+    },
+    visible: {
+      scale: 1,
+      height: "30%",
+      y: -20,
+      transition: {
+        type: "tween",
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
     <>
       {addClicked && (
-        <motion.div className="addTransaction">
+        <motion.div
+          className="addTransaction"
+          variants={addTransactionVariant}
+          initial="hidden"
+          animate="visible"
+        >
           <h3>Add new transaction</h3>
           <form onSubmit={onSubmit}>
             <div className="form-control">
